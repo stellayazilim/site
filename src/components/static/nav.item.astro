@@ -1,0 +1,56 @@
+---
+export interface Props {
+    link: string;
+    text: string;
+    prefetch: boolean;
+    subMenu?: Props[] | undefined;
+}
+
+const pagePath = new URL(Astro.request.url).pathname
+const active = 
+    pagePath == Astro.props.link || 
+    Astro.props?.subMenu?.some((item: Props) => item.link == pagePath);
+
+---
+
+
+<li class="relative">
+    <a 
+    class:list={[active && "active"]}
+    href={Astro.props.link}>{Astro.props.text}    
+       { Astro.props.subMenu && <i class="fa fa-chevron-down"></i> }
+    </a>
+    { 
+        Astro.props.subMenu &&  
+        <ul class="absolute  w-60">
+            {Astro.props.subMenu.map(item => <li> <a href={item.link}> { item.text } </a> </li>)}
+        </ul>
+    }
+    
+</li>
+
+
+<style lang="less">
+ 
+        
+li {
+    a {
+        @apply text-slate-400 hover:text-blue-50  duration-100;
+        &.active {
+            @apply text-indigo-400 hover:text-blue-50;
+        }
+    }
+
+    & ul {
+        @apply invisible p-2 duration-100 ease-out bg-gray-800;
+    }
+
+    &:hover ul {
+        @apply  visible;
+    }
+}
+
+
+
+  
+</style>

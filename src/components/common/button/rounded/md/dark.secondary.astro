@@ -1,0 +1,6 @@
+<button 
+data-aos="fade-up" 
+type={Astro.props.type || "button"} 
+class:list={["px-5 py-2 rounded-full text-gray-200 font-semibold", Astro.props.bg]}>
+    <slot />
+</button>

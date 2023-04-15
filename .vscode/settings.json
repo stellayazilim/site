@@ -1,0 +1,6 @@
+{
+    "less.lint.unknownAtRules": "ignore",
+    "emmet.includeLanguages": {
+        "astro": "html"
+    }
+}
