@@ -1,0 +1,35 @@
+---
+import Header from '$components/static/header.astro';
+
+export interface Props {
+	title: string;
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+			crossorigin="anonymous" 
+			referrerpolicy="no-referrer" />
+		<link is:inline rel="stylesheet" href="node_modules/flowbite/dist/flowbite.min.css">
+		<link is:inline rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+		<title>{Astro.props.title}</title>
+	</head>
+	<body class="flex flex-col bg-gray-900">
+		<Header />
+		<slot />
+		<script is:inline src="node_modules/flowbite/dist/flowbite.js"></script>
+
+		<script>
+			 AOS.init();
+		</script>
+		
+	</body>
+</html>
+

@@ -1,0 +1,38 @@
+---
+import Nav from "$components/static/nav.astro"
+import NavItem from "$components/static/nav.item.astro"
+import { navData, INavItem } from "$config/nav"
+import ButtonDefault from "$components/common/button/classic/md/default.astro"
+import ButtonDarkPrimary from "$components/common/button/classic/md/dark.primary.astro"
+import ToggleDarkModeBtn from "$components/common/button/misc/toggle.dark.mode.svelte"
+---
+
+
+
+<header class="flex flex-row sticky z-10  px-14 h-28 items-center" >
+
+    <h1 class="flex text-4xl font-extrabold text-slate-300 items-center justify-start gap-2 w-60 py-4">
+        <img src="/STELLAS.png" class="w-10" alt="">
+        STELLA
+    </h1>
+
+
+    <Nav>
+        {navData.map((item: INavItem)=> <NavItem {...item} />)}
+
+    </Nav>
+
+
+    <div class="flex gap-4 items-center justify-end">
+        <ButtonDefault type="submit"> 
+            Giris
+        </ButtonDefault>
+
+        <ButtonDarkPrimary>
+            Kayit
+        </ButtonDarkPrimary>
+
+        <ToggleDarkModeBtn client:only />
+    </div>
+</header>
+
