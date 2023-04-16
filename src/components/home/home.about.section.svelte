@@ -1,14 +1,14 @@
-<script>
+<script lang="ts">
 	import Tab from "$components/tab/tab.svelte";
 	import Tabitem from "$components/tab/tab.item.svelte";
 </script>
 <Tab
-				client:only props={{items: []}}
-				currentTab={0}
-				items={["About Us#about", "Our Mission#mission", "Our Vision#vision"]}  >
-			
-				<Tabitem>
-					<section class="w-full h-full py-12">
+				currentTab="About Us"
+				let:currentTab={currentTab}
+				items={["About Us", "Our Mission", "Our Vision"]}  >
+				
+				<Tabitem tabName="About Us" currentTab={currentTab}>
+					<section  class="w-full h-full py-12">
 						<div class="w-full h-full bg-gradient-to-r from-default-dark-secondary to-gray-900 grid grid-cols-2">
 							<div class="relative">
 								<img src="/image-3.jpg" class="h-full absolute w-96" alt="workplace">
@@ -34,8 +34,10 @@
 						</div>
 					</section>
 				</Tabitem>
-				<Tabitem>
-					<section class="w-full h-full py-12">
+				<Tabitem 
+				tabName="Our Mission"
+				currentTab={currentTab}>
+					<section  class="w-full h-full py-12">
 						<div class="w-full h-full bg-gradient-to-r from-default-dark-secondary to-gray-900 grid grid-cols-2">
 							<div class="relative">
 								<img src="/image-3.jpg" class="h-full absolute w-96" alt="workplace">
@@ -61,8 +63,8 @@
 						</div>
 					</section>
 				</Tabitem>
-				<Tabitem>
-					<section class="w-full h-full py-12">
+				<Tabitem tabName="Our Vision" currentTab={currentTab}>
+					<section  class="w-full h-full py-12">
 						<div class="w-full h-full bg-gradient-to-r from-default-dark-secondary to-gray-900 grid grid-cols-2">
 							<div class="relative">
 								<img src="/image-3.jpg" class="h-full absolute w-96" alt="workplace">
@@ -88,4 +90,4 @@
 						</div>
 					</section>
 				</Tabitem>
-			</Tab>
+</Tab>
