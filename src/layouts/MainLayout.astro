@@ -4,6 +4,8 @@ import Header from '$components/static/header.astro';
 export interface Props {
 	title: string;
 }
+
+
 ---
 
 <!DOCTYPE html>
@@ -17,8 +19,8 @@ export interface Props {
 			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
 			crossorigin="anonymous" 
 			referrerpolicy="no-referrer" />
-		<link is:inline rel="stylesheet" href="node_modules/flowbite/dist/flowbite.min.css">
-		<link is:inline rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+		<link rel="stylesheet" href="node_modules/flowbite/dist/flowbite.min.css">
+		<link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
 		<title>{Astro.props.title}</title>
 	</head>
 	<body class="flex flex-col bg-gray-900">
