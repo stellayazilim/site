@@ -12,13 +12,13 @@ import Homeemployesection from '$components/home/home.employee.section.svelte';
 import Hometestimonialsection from '$components/home/home.testimonial.section.astro';
 import Homepricingsection from "$components/home/home.pricing.section.svelte"
 const url = Astro.request.url
-return Astro.redirect("/soon", 301)
+//return Astro.redirect("/soon", 301)
 ---
 
 
 <Layout title="Anasayfa">
 	<main class="w-full" >
-
+		
 		<section id="banner">
 			<div class="h-28 w-full "></div>
 			<div class="container w-full h-[41rem] mx-auto grid grid-cols-2 gap-24">
@@ -194,7 +194,7 @@ return Astro.redirect("/soon", 301)
 				<h2 class="text-5xl font-extrabold text-gray-200 text-center">Trusted by Global Brands</h2>
 				<p class="text-gray-400 w-[44rem] mt-12 text-center text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
 
-				<div class="flex w-full justify-center gap-12 mt-12">
+				<div data-aos="fade-left"  class="flex w-full justify-center gap-12 mt-12">
 					<img src="/uideck.svg" alt="">
 					<img src="/ayroui.svg" alt="">
 					<img src="/graygrids.svg" alt="">

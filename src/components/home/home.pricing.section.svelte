@@ -105,7 +105,9 @@
     
 
         {#each plans as plan, i }
-            <div class="w-full overflow-hidden box-border">
+            <div 
+          
+            class="w-full overflow-hidden">
                 <div class="border-r-{i !== 2 ? 2 : 0} border-default-dark-secondary">
                     <div class="border-b-2 border-gray-700">
                         <div  class="p-16 flex flex-col  text-center gap-4">
