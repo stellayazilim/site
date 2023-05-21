@@ -1,74 +1,91 @@
 ---
-import Layout from '../layouts/MainLayout.astro';
-import Card from '../components/Card.astro';
-import BtnRoundedDarkSecondary from "$components/common/button/rounded/md/dark.secondary.astro"
-import TypeWritter from "$components/misc/typewriter.svelte"
-import BtnClassicMdPrimary from "$components/common/button/classic/md/default.astro"
+import Layout from "../layouts/MainLayout.astro";
+import Card from "../components/Card.astro";
+import BtnRoundedDarkSecondary from "$components/common/button/rounded/md/dark.secondary.astro";
+import TypeWritter from "$components/misc/typewriter.svelte";
+import BtnClassicMdPrimary from "$components/common/button/classic/md/default.astro";
 
-
-
+return Astro.redirect("/soon", 301);
 ---
 
 <Layout title="Anasayfa">
-	<main class="w-full" >
+  <main class="w-full">
+    <section id="banner">
+      <div class="h-28 w-full"></div>
+      <div class="container w-full h-[41rem] mx-auto grid grid-cols-2 gap-24">
+        <div class="flex justify-center items-center">
+          <div>
+            <BtnRoundedDarkSecondary bg="bg-gray-800 ">
+              <div class="flex items-center p-2 gap-4">
+                <span class="block w-2 h-2 rounded-full bg-blue-500"></span>
+                Tailwind Template for Startups
+              </div>
+            </BtnRoundedDarkSecondary>
+            <h2 class="text-6xl text-gray-300 font-bold mt-6">
+              <div>Digital Solutions for</div>
+              <div>
+                your <TypeWritter client:load value="company" />
+              </div>
 
-		<section id="banner">
-			<div class="h-28 w-full "></div>
-			<div class="container w-full h-[41rem] mx-auto grid grid-cols-2 gap-24">
-				<div class="flex justify-center items-center">
-					<div>
-						<BtnRoundedDarkSecondary bg="bg-gray-800 ">
-							<div class="flex items-center p-2 gap-4">
-								<span class="block w-2 h-2 rounded-full bg-blue-500"></span>
-								Tailwind Template for Startups
-							</div>
-						</BtnRoundedDarkSecondary>
-						<h2 class="text-6xl text-gray-300 font-bold mt-6">
-							<div>
-								Digital Solutions for 
-							</div>
-							<div>
-								your <TypeWritter client:load value="company" />
-							</div>
+              <div class="mt-6 flex items-center gap-12">
+                <BtnClassicMdPrimary>
+                  <span class="flex items-center gap-4 text-base"
+                    >Teklif birakin <i class="fa-solid fa-arrow-right"
+                    ></i></span
+                  >
+                </BtnClassicMdPrimary>
 
-                        
-							<div class="mt-6 flex items-center gap-12">
-								<BtnClassicMdPrimary> <span class="flex items-center gap-4 text-base">Teklif birakin <i class="fa-solid fa-arrow-right"></i></span>  </BtnClassicMdPrimary>
+                <span class="flex text-base text-white fill-white stroke-white">
+                  <i class="fa-regular fa-triangle fa-rotate-90"></i> Nasil yapiyoruz
+                </span>
+              </div>
+            </h2>
+          </div>
+        </div>
 
-								<span class="flex text-base text-white fill-white stroke-white ">
-									<i class="fa-regular fa-triangle fa-rotate-90"></i> Nasil yapiyoruz
-								</span>
-							</div>
-						</h2>
-					</div>
-				
-				</div>
+        <div class="h-full pt-24">
+          <div class="relative h-full">
+            <img
+              src="/image-1.jpg"
+              class="absolute left-0 bottom-0 z-10 shadow-xl shadow-gray-950"
+              alt=""
+            />
+            <img
+              src="/image-2.jpg"
+              class="absolute left-10 bottom-10 z-1 blur-10 shadow-lg shadow-gray-500"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-				<div class="h-full pt-24">
-						<div class="relative h-full  ">
-							<img src="/image-1.jpg"  class="absolute left-0 bottom-0 z-10  shadow-xl shadow-gray-950" alt="">
-							<img src="/image-2.jpg"  class="absolute left-10  bottom-10  z-1 blur-10 shadow-lg shadow-gray-500 " />
-						</div>
-				</div>
-			</div>
-		</section> 
-
-		<div class="h-[41rem] "></div>
-		<div class="bg-gray-900">
-			<svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(17, 23, 34, 1)" offset="0%"></stop><stop stop-color="rgba(17, 23, 34, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,80L480,80L960,0L1440,80L1920,20L2400,0L2880,40L3360,70L3840,0L4320,90L4800,50L5280,80L5760,10L6240,70L6720,50L7200,90L7680,0L8160,60L8640,60L9120,60L9600,90L10080,60L10560,80L11040,50L11520,10L11520,100L11040,100L10560,100L10080,100L9600,100L9120,100L8640,100L8160,100L7680,100L7200,100L6720,100L6240,100L5760,100L5280,100L4800,100L4320,100L3840,100L3360,100L2880,100L2400,100L1920,100L1440,100L960,100L480,100L0,100Z"></path></svg>
-		</div>
-		<section class="bg-gray-900">
-	
-		</section>
-	</main>
+    <div class="h-[41rem]"></div>
+    <div class="bg-gray-900">
+      <svg
+        id="wave"
+        style="transform:rotate(180deg); transition: 0.3s"
+        viewBox="0 0 1440 100"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        ><defs
+          ><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"
+            ><stop stop-color="rgba(17, 23, 34, 1)" offset="0%"></stop><stop
+              stop-color="rgba(17, 23, 34, 1)"
+              offset="100%"></stop></linearGradient
+          ></defs
+        ><path
+          style="transform:translate(0, 0px); opacity:1"
+          fill="url(#sw-gradient-0)"
+          d="M0,80L480,80L960,0L1440,80L1920,20L2400,0L2880,40L3360,70L3840,0L4320,90L4800,50L5280,80L5760,10L6240,70L6720,50L7200,90L7680,0L8160,60L8640,60L9120,60L9600,90L10080,60L10560,80L11040,50L11520,10L11520,100L11040,100L10560,100L10080,100L9600,100L9120,100L8640,100L8160,100L7680,100L7200,100L6720,100L6240,100L5760,100L5280,100L4800,100L4320,100L3840,100L3360,100L2880,100L2400,100L1920,100L1440,100L960,100L480,100L0,100Z"
+        ></path></svg
+      >
+    </div>
+    <section class="bg-gray-900"></section>
+  </main>
 </Layout>
 
-
-
-
 <style lang="less">
-	section#banner {
-        @apply ~"absolute top-0  h-[48rem]  z-0 w-full flex flex-col bg-gradient-to-tr  from-default-dark-primary  from-30%    via-default-dark-secondary to-90%  to-default-dark-primary  ";
-    }
-
+  section#banner {
+    @apply ~"absolute top-0  h-[48rem]  z-0 w-full flex flex-col bg-gradient-to-tr  from-default-dark-primary  from-30%    via-default-dark-secondary to-90%  to-default-dark-primary  ";
+  }
 </style>
